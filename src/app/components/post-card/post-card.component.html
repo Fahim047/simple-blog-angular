@@ -1,0 +1,29 @@
+<div class="post-card">
+  <img [src]="post?.thumbnailUrl" alt="Thumbnail" class="thumbnail" />
+  <div class="post-content">
+    <h2 class="post-title">
+      <a routerLink="/posts/{{ post?.id }}">{{ post?.title }}</a>
+    </h2>
+    <p class="post-description">
+      {{ post?.description }}
+    </p>
+    <div class="post-tags">
+      @for(tag of post?.tags; track tag){
+
+      <span class="tag">{{ tag }}</span>
+      }
+    </div>
+    <button class="read-button" [routerLink]="'/posts/1'">Read</button>
+  </div>
+  <div class="menu-icon">
+    <img src="assets/icons/more-vertical.svg" alt="Menu" />
+  </div>
+</div>
+
+<dialog>
+  <p>Greetings, one and all!</p>
+  <form method="dialog">
+    <button>OK</button>
+  </form>
+</dialog>
+<button>Show Modal</button>

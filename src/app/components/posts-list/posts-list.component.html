@@ -1,0 +1,13 @@
+<div class="header">
+  <input type="text" placeholder="Search posts..." class="searchbox" />
+  <button class="create-post">
+    <a routerLink="create">Create Post</a>
+  </button>
+</div>
+
+<!-- List of Posts -->
+<div class="posts-list">
+  @for (post of posts; track post.id) {
+  <app-post-card [post]="post"></app-post-card>
+  }
+</div>

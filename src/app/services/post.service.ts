@@ -7,11 +7,11 @@ import { PostType } from '../types';
   providedIn: 'root',
 })
 export class PostService {
-  baseUrl = 'https://localhost/3000/';
+  baseUrl = 'http://localhost:3000/';
 
   constructor(private http: HttpClient) {}
 
-  getAllPosts(): Observable<PostType[]> {
+  getAllPosts() {
     return this.http.get<PostType[]>(this.baseUrl + 'posts');
   }
 }
